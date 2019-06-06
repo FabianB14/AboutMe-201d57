@@ -1,0 +1,30 @@
+dfn {
+  color: blue;
+}
+p 
+{
+  color: lightblue;
+}
+footer
+{
+  color: red;
+}
+
+h1{
+  color: blue;
+}
+
+*{
+  background-color: lightslategray;
+}
+
+div{
+  color: lightblue;
+  border-style: inset;
+  border-color: black;  
+  display: inline-block;
+}
+.school{
+  padding-bottom: 20px;
+}
+
