@@ -1,4 +1,5 @@
 dfn {
+<<<<<<< HEAD
   color: blue;
 }
 p 
@@ -28,3 +29,19 @@ div{
   padding-bottom: 20px;
 }
 
+=======
+  color: blue
+}
+p 
+{
+  color: black
+}
+footer
+{
+  color: red
+}
+
+h1{
+  color: blue
+}
+>>>>>>> 0cc74288b466961546ded03a92e23ecc012dbeae
