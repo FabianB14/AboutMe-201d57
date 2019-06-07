@@ -76,7 +76,7 @@ var randomNumber = function(){
   //I've created a random number for the user to guess
   var randomNum = Math.floor(Math.random() *15);
   console.log('the number is ' + randomNum);
-  var userNumberGuess = prompt('Guess a number from 1 - 15');
+  var userNumberGuess = prompt('Guess a number from 0 - 15');
   parseInt(userNumberGuess, 10);
 
   while(times < 3){
@@ -145,9 +145,9 @@ var calculations = function(){
   }
 };
 
-
 getUserName();
 firstFive();
 randomNumber();
 martialArtsGuessing();
 calculations();
+document.getElementById('username').innerHTML = userName;
