@@ -1,5 +1,6 @@
 'use strict';
-//This is a count var to keep count of how many answers are right and how many are worng
+//Global varrables
+
 var countRight = 0;
 var countWrong = 0;
 var flag = false;
@@ -21,28 +22,31 @@ var trys = 1;
 var times = 0;
 var userName;
 var questions = 7;
-//Array Section
-//answers array for the site visitors
+
+//Global Array Section
+
 var userAnswersArray = [];
 var questionsArray= [langQuestion,heightQuestion,loveCodingQuestion,locationQuestion,laptopQuestion];
 var correctAnswerArray = [langAnswer,heightAnswer,loveCodingAnswer,locationAnswer,laptopAnswer];
 var martialArtsAnswers = ['karate','jiu jitsu','taekwondo','military combatives'];
-//This is getting user's name and welcomes the user to the site
+
+//This is getting user's name and welcomes the user to the site.
 
 var getUserName = function(){
   alert('Hi, Welcome to paradise!!');
   userName = prompt('Just kidding, Enter your name.');
 };
-
+//This is used to check the prompt input to ensure is user inputs "y" or "n" instead of "yes" or "no".
+//This will also change the input
 var promptCheck = function(input, i){
-  if (input === 'y'){
+  if (input === 'y' || input === 'sure'){
     userAnswersArray[i] = 'yes';
-  } else if(input === 'n'){
+  } else if(input === 'n' || input === 'nope'){
     userAnswersArray[i] = 'no';
   }
 };
 
-
+//This is asks the first five questions being as the first five questions are similar.
 var firstFive = function(){
   alert('Welcome to my site lets have a short quiz followed by a guessing game.');
   for(var i = 0; i < questionsArray.length; i++){
@@ -65,6 +69,7 @@ var firstFive = function(){
 
 
 // Guessing game starts!!
+// This will generate a random number and have the user guess the the number.
 
 var randomNumber = function(){
   alert('Now we will have a guessing game. You will be prompted to pick a number. You will be told if the number is too high or too low. You will get 4 chances to guess the correct answer.');
@@ -83,7 +88,7 @@ var randomNumber = function(){
     else if(userNumberGuess > randomNum)
     {
       alert(randomNumhigh);
-    } 
+    }
     else if(userNumberGuess === isNaN)
     {
       alert(wrongAlert);
@@ -127,9 +132,9 @@ var martialArtsGuessing = function(){
   alert('All of the possible answers you could have said are '+martialArtsAnswers);
 };
 
+//This will do calculations for the percentage
 var calculations = function(){
   var countRightPercent = Math.floor(10/ questions * countRight * 10);
-  // countRightPercent = countRightPercent * 10;
   while(countRight !== 7)
   {
     alert(userName +', You almost had it, You got ' +countRight+' out of 7 right that\'s '+ countRightPercent +'%');
